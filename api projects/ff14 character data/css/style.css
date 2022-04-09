@@ -1,0 +1,64 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html{
+     font-size: 62.5%
+}
+
+body {
+     font-size: 2rem
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+input {
+     display: block;
+     margin: 10px 0px;
+}
+
+select {
+     display:block;
+     margin-bottom: 10px;
+}
+
+.dc, .server {
+     display:none;
+}
+
+button.find{
+     display:none;
+     margin: 20px 0px;
+}
+
+button.test{
+     display:block;
+     margin:20px 0px;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
