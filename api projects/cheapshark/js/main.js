@@ -20,9 +20,12 @@ function findDeal(){
     .then(data => {
       
       data.forEach(currentGame => {
+        let dealID =currentGame.cheapestDealID
+        let dealURL ="https://www.cheapshark.com/redirect?dealID=[id]"
+        dealURL = dealURL.replace("[id]", dealID)
+        
         let li = document.createElement("li")
-        li.innerText= `Name:${currentGame.external}     |     Price:${currentGame.cheapest}`
-        console.log(li)
+        li.innerHTML= `Name:<a href=${dealURL}>${currentGame.external}</a>   |   Price:${currentGame.cheapest}`
         gameList.appendChild(li)
       })
     })
